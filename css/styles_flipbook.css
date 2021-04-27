@@ -143,3 +143,10 @@
   left: 0;
   top: 0;
 }
+
+.kezdo{
+  background-image:url(../pages/cover.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /*
+}
