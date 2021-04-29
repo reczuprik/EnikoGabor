@@ -97,3 +97,7 @@
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover 
 }
+.konyv{
+  max-height: 100vh;
+  overflow: auto;
+}
