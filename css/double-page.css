@@ -51,6 +51,10 @@ body{
 	-ms-user-select: none;
 	user-select: none;
 	margin:0;
+	background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
 }
 
 .flipbook-viewport .shadow{
@@ -70,4 +74,9 @@ body{
 	width:800px;
 	height:400px;
 	background-size:100% 100%;
+}
+
+.formul{
+	height: 50%;
+	
 }
