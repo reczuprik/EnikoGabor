@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
 
   <title>Enikő és Gábor</title>
   
@@ -22,6 +22,8 @@
         <div class="page page-cover page-cover-top" data-density="hard" >
 
             <div class="page-content kezdo">
+              <button  type="button"class="btn-next">Click Me!</button>
+
                 <!-- <h2>BOOK TITLE</h2> -->
             </div>
         </div>
@@ -85,9 +87,9 @@
                 </div>
             </div>
         </div>
-        <div class="page page-cover page-cover-bottom" data-density="hard">
+        <div class="page page-cover page-cover-bottom utolso " data-density="hard">
             <div class="page-content">
-                <div class="page-image" style="background-image: url(pages/night.jpg)"></div>
+                <!--<div class="page-image" style="background-image: url(pages/night.jpg)"></div>-->
             </div>
         </div>
     </div>
@@ -96,13 +98,16 @@
     <script src="node_modules/page-flip/dist/js/page-flip.browser.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        console.log(screen.width);
+        console.log(window.innerHeight);
+
+        var h = window.innerHeight*0.7;
         const pageFlip = new St.PageFlip(
+            
             document.getElementById("demoBookExample"),
             {
 
             width:  550, // base page width
-            height: 700, // base page height
+            height: h, // base page height
 
             size: "stretch",
             // set threshold values:
@@ -117,10 +122,17 @@
             mobileScrollSupport: false // disable content scrolling on mobile devices
             }
         );
-
+        
+        
         // load pages
         pageFlip.loadFromHTML(document.querySelectorAll(".page"));
         // triggered when the state of the book changes
+        document.querySelector(".btn-next").addEventListener("click", () => {
+        pageFlip.flipNext(); // Turn to the next page (with animation)
+        });
+
+        
+        
     });
   </script>
 </body>
