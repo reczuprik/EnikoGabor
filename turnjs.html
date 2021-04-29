@@ -81,38 +81,58 @@ function loadApp() {
 
 	$('.flipbook').turn({
 			// Width
-
-			width:922,
-
+			width:800,
 			// Height
-
-			height:600,
-
+			height:600 ,
 			// Elevation
-
 			elevation: 50,
-
 			// Enable gradients
-
 			gradients: true,
-
 			// Auto center this flipbook
-
 			autoCenter: true,
-
             duration:2000
 
 	});
+	function getSize() {
+  		console.log('get size');
+ 		// var width = document.body.clientWidth;
+ 		// var height = document.body.clientHeight;
+  		var width = 640;
+  		var height = 832;
+  		return {
+    	width: width,
+    	height: height
+	  	}
+	}
+	window.addEventListener('resize', resize);
+	function resize() {
+	console.log('resize event triggered');
 
+	var size = getSize();
+	console.log(size);
+
+	if (size.width > size.height) { // landscape
+		$('.flipbook').turn('display', 'double');
+	}
+	else {
+		$('.flipbook').turn('display', 'single');
+	}
+
+	$('.flipbook').turn('size', size.width, size.height);
+	}
+
+	
 }
 
 // Load the HTML4 version if there's not CSS transform
+
+
 
 yepnope({
 	test : Modernizr.csstransforms,
 	yep: ['js/lib/turn.js'],
 	nope: ['js/lib/turn.html4.min.js'],
-    both: ['css/basic.css'],
+    both: ['css/basic.css','js/lib/scissor.min.js'],
 	complete: loadApp
 });
 
