@@ -1,1 +1,1 @@
-<?php include_once("flipbook.html"); ?>
+<?php include_once("index.html"); ?>
