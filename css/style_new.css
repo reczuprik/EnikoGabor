@@ -72,7 +72,7 @@ body{
 }
 .visszajelzes{
     padding: 5%;
-    overflow: hidden;
+    overflow: auto;
     box-sizing: border-box;
     
 }
