@@ -1,8 +1,11 @@
 body{
     margin:0;
+    margin-left: auto;
+    
     padding: 0;
     height:   100vh;
     display: flex;
+    
     justify-content: center;
     align-items: center;
     overflow: hidden
@@ -14,9 +17,10 @@ img{
     width: 100%;
     object-fit: cover;
     object-position: center;
-}
+}   
 .book{
     display: flex;
+    position: absolute;
 }
 #cover{
     
@@ -78,13 +82,38 @@ p{
     background-color: #000;
 
 }
+.submitDiv{
+    display: flex;
+}
 .visszajelzes{
+    
     font-family: Bahnschrift SemiBold;
     text-transform: uppercase;
     padding-left:10px;
     overflow: hidden;
     height: 100%;
     color:gray;
+
+}
+.visszajelzes h1{
+    font-size: 20px;
+}
+.visszajelzes label{
+    font-size: 0.7rem;
+}
+.visszajelzes input{
+    font-size: 0.7rem;
+}
+.visszajelzes p{
+    
+    padding-left: 10px;
+    font-size: 0.6rem;
+    line-height: 150%;
+    margin: auto
+
+}
+.btn-outline-secondary{
+    height: 3rem;
 }
 .next-btn{
     z-index: 100;

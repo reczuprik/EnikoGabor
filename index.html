@@ -31,44 +31,45 @@
                 <div class="front">
                     <div class="visszajelzes">
                         <h1>Visszajelzés</h1>
-                        <form class="respondClass" action="/participant" method="post">
-                             <div class="form-group">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input " type="radio" name="there" id="ottLesz" value="TRUE" required>
-                                <label class="form-check-label" for="inlineRadio1">Ott leszek</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="there" id="nemLeszOtt" name="there" value="FALSE" required>
-                                <label class="form-check-label" for="inlineRadio2">Nem tudok részt venni</label>
-                            </div>
+                        <form  action="/participant" method="post">
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input " type="radio" name="there" id="ottLesz" value="TRUE" required>
+                                    <label class="form-check-label" for="inlineRadio1">Ott leszek</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="there" id="nemLeszOtt" name="there" value="FALSE" required>
+                                    <label class="form-check-label" for="inlineRadio2">Nem tudok részt venni</label>
+                                </div>
                             </div>
                     
                             <div class="form-group">
-                            <label for="nev">Neved</label>
-                            <input type="text" class="form-control transparentInputBox" id="nev" name="ParticipantName" placeholder="" required>
+                                <label for="nev">Neved</label>
+                                <input type="text" class="form-control transparentInputBox" id="nev" name="ParticipantName" placeholder="" required>
                             </div>
                             <div class="form-group">
-                            <label for="emailAddress" class="form-label">E-mail cím(nem kötelező)</label>
-                            <input type="email" class="form-control transparentInputBox" id="emailAddress" name="ParticipantEmail" aria-describedby="emailHelp">
+                                <label for="emailAddress" class="form-label">E-mail cím(nem kötelező)</label>
+                                <input type="email" class="form-control transparentInputBox" id="emailAddress" name="ParticipantEmail" aria-describedby="emailHelp">
                             </div>
                     
                             <div class="form-group">
-                            <label for="kiserok">Kisérő és Családtagok nevei</label>
-                            <textarea class="form-control input-sm transparentInputBox" aria-label="With textarea" name="ParticipantFollowers" id="kiserok"></textarea>
+                                <label for="kiserok">Kisérő és Családtagok nevei</label>
+                                <textarea class="form-control input-sm transparentInputBox" aria-label="With textarea" name="ParticipantFollowers" id="kiserok"></textarea>
                             </div>
                     
                             <div class="form-group">
-                            <div class="mb-3">
-                                <label for="megjegyzes">Üzenetek (Különleges étrend és zenekérés)</label>
-                                <textarea class="form-control transparentInputBox " aria-label="With textarea" rows="2" name="ParticipantNote" id="megjegyzes"></textarea>
+                                <div class="mb-3">
+                                    <label for="megjegyzes">Üzenetek (Különleges étrend és zenekérés)</label>
+                                    <textarea class="form-control transparentInputBox " aria-label="With textarea" rows="2" name="ParticipantNote" id="megjegyzes"></textarea>
+                                </div>
                             </div>
+                            <div class="submitDiv">
+                                <button type="submit" id="submitBtn" name="resztvevoRequest"class="btn btn-outline-secondary">Küldés</button>
+                                <p>Szeretnénk megkérni, hogy részvételi szándékod 2021.06.13-ig jeled!</p>
+                                <label class="respndText hidden" id="kszitext">Köszönjük hogy visszajeleztél</label>
                             </div>
-                            <button type="submit" name="resztvevoRequest" class="btn btn-outline-secondary">Küldés</button>
-                      
                         </form>
                     </div>
-                    
-                    
                 </div>
             </div>
         </div>     
@@ -100,6 +101,14 @@
             document.getElementById("forward").classList.remove("hidden")
         };
     }
+
+
+    document.getElementById("submitBtn").onclick = function(e) {
+        console.log(e);
+        e.preventDefault;
+    }
+    
+        
     
     
     
