@@ -3,119 +3,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="css/style_new.css">
+    <title>Enikő és Gábor esküvője</title>
+
 </head>
 <style>
-    body{
-        overflow: hidden;
-        box-sizing: border-box;
-        
-    }
-    .container{
-        display: flex;
-        height: 80vh;
-        width: 120vh;
-        max-width: 80%;
-        margin: 5% auto;
-        padding-left: 10%;
-        padding-right: 10%;
-        justify-content: center;
-    }
-    .column1{
-        width: 50%;
-        height: 100%;
-        background-image: url("images/meghivó.png");
-        background-position: center;
-        background-repeat: no-repeat no-repeat;
-        background-size: 100% 100%;
-    }
-    .column2{
-        width: 50%;
-        height: 100%;
-        position: relative;
-        perspective: 4000px;
-    }
-    .page{
-        width: 100%;
-        height: 100%;
-        transform-origin: left;
-        transform-style: preserve-3d;
-        transform: rotateY(0deg);
-        transition: 1.4s;
-        
-    }
-    .element1{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: url("images/cover.jpg");
-        background-position: center;
-        background-repeat: no-repeat no-repeat;
-        background-size: cover;
-        backface-visibility: hidden;
-    }
-    .element2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: blue;
-        background-image: url("images/menetrend.png");
-        background-position: center;
-        background-repeat: no-repeat no-repeat;
-        background-size: 100% 100%;
-        transform: rotateY(180deg);   
-        
-    }
-    .btn{
-        position: absolute;
-        z-index: 3;
-        bottom: 0;
-        right: 0;
-    }
-    .page1Flipped{
-        transform: rotateY(-180deg);
-    }
-    .notVisible{
-        display: none;
-    }
 </style>
-<body onload="resizes()">
+<body">
 
     <div class="container">
-        <div class="column1" id="cover">
-            
+        <div class="column1" id="landscape_cover">     
         </div>
-        <div class="column2">
+        <div class="column2" id="col2">
             <div class="p1 page" id="bal">
+                <div class="element2" id="landscape_menetrend"></div>
+                <div class="element1" ></div>
+            </div>
+            <div class="p2 page visszajelzes" id="visszajelzes">
+                    <form  action="/participant" method="post" class=" form-group" >
+                        <h1>Visszajelzés</h1>
+                        <div class="radioform">
+                            <div class="form">
+                                <input class="form-check-input " type="radio" name="there" id="ottLesz" value="TRUE" required>
+                                <label class="form-check-label" for="inlineRadio1">Ott leszek</label>
+                            </div>
+                            <div class="form">
+                                <input class="form-check-input" type="radio" name="there" id="nemLeszOtt" value="FALSE" required>
+                                <label class="form-check-label" for="inlineRadio2">Nem tudok részt venni</label>
+                            </div>
+                        </div>
                 
-                <div class="element2">
+                        <div class="form">
+                            <label for="nev">Neved</label>
+                            <input type="text" class="inputBox" id="nev" name="ParticipantName" placeholder="" required>
+                        </div>
+                        <div class="form">
+                            <label for="emailAddress" class="form-label">E-mail cím(nem kötelező)</label>
+                            <input type="email" class="inputBox" id="emailAddress" name="ParticipantEmail" aria-describedby="emailHelp">
+                        </div>
                 
-                </div>
-                <div class="element1" >
+                        <div class="form">
+                            <label for="kiserok">Kisérő és Családtagok nevei</label>
+                            <textarea class="inputBox" aria-label="With textarea" name="ParticipantFollowers" id="kiserok"></textarea>
+                        </div>
                 
-                </div>
-
+                        <div class="form">
+                            <div class="mb-3">
+                                <label for="megjegyzes">Üzenetek (Különleges étrend és zenekérés)</label>
+                                <textarea class="inputBox" aria-label="With textarea" rows="2" name="ParticipantNote" id="megjegyzes"></textarea>
+                            </div>
+                        </div>
+                        <div class="submitDiv">
+                            <button type="submit" id="submitBtn" name="resztvevoRequest" class="submitbtn">Küldés</button>
+                            <p>Szeretnénk megkérni, hogy részvételi szándékod 2021.06.13-ig jeled!</p>
+                            <label class="respndText notVisible " id="kszitext">Köszönjük hogy visszajeleztél</label>
+                        </div>
+                    </form>
             </div>
             <button onclick="myFunction()" class="btn">Click</button>
+            
         </div>
+
         
     </div>
 </body>
 <script>
-    function myFunction(){
-        document.getElementById("bal").classList.toggle("page1Flipped")
-    }
-    window.onresize = resize;
-    function resize(){
-        
-        if(screen.availHeight > screen.availWidth){
-            document.getElementById("cover").classList.add("notVisible")
-        }
-        if(screen.availHeight < screen.availWidth){
-            document.getElementById("cover").classList.remove("notVisible")
-        }
-        // Announce the new orientation number
-        
-    }
+
 </script>
 </html>
