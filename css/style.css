@@ -120,7 +120,7 @@ p{
     position: relative;
     left:80%;
     font-family: Bahnschrift SemiLight;
-    
+    backface-visibility: hidden;
     cursor: pointer;
     color:#000;
     
