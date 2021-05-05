@@ -19,20 +19,20 @@
             <div class="flip" id="p1">
                 <div class="back">
                     <img src="images/menetrend.png">
-                    <label class="back-btn" id="backward"><< vissza </label>
+                    <label class="back-btn mybutton" id="backward"><< vissza </label>
                 </div>
                 <div class="front firstPage">
                     <img src="images/cover.jpg">
-                     <label class="next-btn"  id="forward">előre >></label> 
+                     <label class="next-btn mybutton"  id="forward">előre >></label> 
                 </div>
             </div>
             <div class="flip" id="p2">
                 
-                <div class="front">
-                    <div class="visszajelzes">
+                <div class="front visszajelzes">
+                    
                         <h1>Visszajelzés</h1>
                         <form  action="/participant" method="post">
-                            <div class="form-group">
+                            <div class=" form-group radioform">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input " type="radio" name="there" id="ottLesz" value="TRUE" required>
                                     <label class="form-check-label" for="inlineRadio1">Ott leszek</label>
@@ -69,7 +69,7 @@
                                 <label class="respndText hidden" id="kszitext">Köszönjük hogy visszajeleztél</label>
                             </div>
                         </form>
-                    </div>
+                    
                 </div>
             </div>
         </div>     

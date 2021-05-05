@@ -1,11 +1,8 @@
 body{
-    margin:0;
-    margin-left: auto;
-    
+    margin:auto;
     padding: 0;
-    height:   100vh;
+    height: 100vh;
     display: flex;
-    
     justify-content: center;
     align-items: center;
     overflow: hidden
@@ -23,7 +20,6 @@ img{
     position: absolute;
 }
 #cover{
-    
     width: 65vh;
     height: 87vh;
     position: relative;
@@ -34,12 +30,10 @@ img{
     
 }
 .flip-book{
-    
     width: 65vh;
     height: 87vh;
     position: relative;
-    perspective: 1500px;
-
+    perspective: 4000px;
 }
 
 .flip{
@@ -51,7 +45,7 @@ img{
     transform-origin: left;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
-    transition: 1.0s;
+    transition: 1.4s;
     color: #000;    
 }
 p{
@@ -86,14 +80,14 @@ p{
     display: flex;
 }
 .visszajelzes{
-    
+    margin-top: 10%;
     font-family: Bahnschrift SemiBold;
     text-transform: uppercase;
     padding-left:10px;
     overflow: hidden;
     height: 100%;
     color:gray;
-
+    
 }
 .visszajelzes h1{
     font-size: 20px;
@@ -112,32 +106,32 @@ p{
     margin: auto
 
 }
+.radioform{
+    margin-bottom: 8px;
+}
 .btn-outline-secondary{
     height: 3rem;
 }
-.next-btn{
+.mybutton{
     z-index: 100;
     position: relative;
-    float: right;
-    padding-right: 5%;
     font-family: Bahnschrift SemiLight;
+    color:gray; 
     backface-visibility: hidden;
     cursor: pointer;
     color:#000;
+}
+
+.next-btn{
+    float: right;
+    padding-right: 5%;
+    
     
 }
 .back-btn{
-    z-index: 100;
-    position: relative;
-    font-family: Bahnschrift SemiLight;
     float: left;
     padding-left: 5%;
-    cursor: pointer;
-    color:#000;
 }
-
-
-
 #p1{
     z-index: 3;
 }
@@ -162,6 +156,7 @@ p{
     transform: rotateY(-180deg);
     z-index: 1;
 }
+/* }
 .page2Flipped{
     transform: rotateY(-180deg);
     z-index: 2;
@@ -169,7 +164,7 @@ p{
 .page3Flipped{
     transform: rotateY(-180deg);
     z-index: 3;
-}
+} */
 
 .hidden{
     visibility:hidden;
