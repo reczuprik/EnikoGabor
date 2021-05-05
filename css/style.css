@@ -118,7 +118,8 @@ p{
 .next-btn{
     z-index: 100;
     position: relative;
-    left:80%;
+    float: right;
+    padding-right: 5%;
     font-family: Bahnschrift SemiLight;
     backface-visibility: hidden;
     cursor: pointer;
@@ -129,7 +130,8 @@ p{
     z-index: 100;
     position: relative;
     font-family: Bahnschrift SemiLight;
-    left: 20%;
+    float: left;
+    padding-left: 5%;
     cursor: pointer;
     color:#000;
 }
