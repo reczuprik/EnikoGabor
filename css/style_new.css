@@ -7,14 +7,16 @@ body{
 
 }
 .container{
-    display: flex;
-    height: 80vh;
-    width: 130vh;
-    max-width: 80%;
-    margin: 3% auto 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-    justify-content: center;
+	display: flex;
+	height: 80vh;
+   	width: 130vh;
+	min-height: 200px;
+	min-width: 325px;
+	max-width: 80%;
+	margin: 3% auto 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+	justify-content: center;
 }
 .column1{
     width: 50%;
