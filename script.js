@@ -1,8 +1,29 @@
+let actualPotraitPage = 0
+let actualLandscapePage = 0
+
 window.onload = resize;
 
 function flipLandscape(){
-    document.getElementById("bal").classList.toggle("page1Flipped")
+    
+    if (actualLandscapePage===0) {
+        
+        document.getElementById("flipPageLandscape").classList.toggle("page1Flipped")
+        document.getElementById("fwdbtnLandscape").classList.add("notVisibleWithOpacity")
+        document.getElementById("bwdbtnLandscape").classList.remove("notVisibleWithOpacity")
+        actualLandscapePage=1
+        actualPotraitPage=3
+    }else{
+        document.getElementById("flipPageLandscape").classList.toggle("page1Flipped")
+        document.getElementById("fwdbtnLandscape").classList.remove("notVisibleWithOpacity")
+        document.getElementById("bwdbtnLandscape").classList.add("notVisibleWithOpacity")
+        actualLandscapePage=0
+        actualPotraitPage=0
+    }
 	
+}
+
+function flipPotrait(){
+    
 }
 
 window.onresize = resize;
@@ -10,19 +31,11 @@ function resize(){
     var landScapeElements = document.getElementsByClassName("landscape")
 	var potraitElements = document.getElementsByClassName("potrait")
     if(screen.availHeight > screen.availWidth){
-        //potrait
-        /* document.getElementById("landscape_cover").classList.add("notVisible")
-        document.getElementById("landscape_menetrend").classList.add("notVisible")
-        document.getElementById("backbtnPotrait").classList.remove("notVisible") */
-        
-        
-		Array.from(landScapeElements).forEach((el) => {
-			// Do stuff here
+        Array.from(landScapeElements).forEach((el) => {
 			el.classList.add("notVisible")
 			
 		});
 		Array.from(potraitElements).forEach((el) => {
-			// Do stuff here
 			el.classList.remove("notVisible")
 			
 		});
@@ -30,20 +43,12 @@ function resize(){
 	}
     else{
 		Array.from(landScapeElements).forEach((el) => {
-			// Do stuff here
 			el.classList.remove("notVisible")
-			
 		});
 		Array.from(potraitElements).forEach((el) => {
-			// Do stuff here
 			el.classList.add("notVisible")
-			
 		});
-        /* document.getElementById("landscape_cover").classList.remove("notVisible")
-        document.getElementById("landscape_menetrend").classList.remove("notVisible")
-        document.getElementById("backbtnPotrait").classList.add("notVisible") */
         document.getElementById("col2").style.width="50%"
     }
-    // Announce the new orientation number
-    
+   
 }

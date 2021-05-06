@@ -10,21 +10,21 @@ body{
 	display: flex;
 	height: 80vh;
    	width: 130vh;
-	min-height: 200px;
-	min-width: 325px;
+	min-height: 180px;
+	min-width: 290px;
 	max-width: 80%;
 	margin: 3% auto 5%;
-	padding-left: 10%;
-	padding-right: 10%;
+	
 	justify-content: center;
 }
-.column1{
+.landscapeMeghivo{
     width: 50%;
     height: 100%;
     background-image: url("../images/meghivo.jpg");
     background-position: center;
     background-repeat: no-repeat no-repeat;
     background-size: 100% 100%;
+    position: relative;
 }
 .column2{
     width: 50%;
@@ -42,6 +42,13 @@ body{
     transition: 1.4s;
     
 }
+.p0{
+    z-index: 4;
+    background-image: url("../images/meghivo.jpg");
+    background-position: center;
+    background-repeat: no-repeat no-repeat;
+    background-size: 100% 100%;
+}
 .p1{
     z-index: 3;
 }
@@ -57,7 +64,7 @@ body{
     background-position: center;
     background-repeat: no-repeat no-repeat;
     background-size: cover;
-    
+    backface-visibility: hidden;
 }
 .element2{
     position: absolute;
@@ -145,11 +152,11 @@ body{
     
 }
 .frontbtn{
-    backface-visibility: hidden;
+    transition: 1s;
     right: 0;
 }
 .backbtn{
-    backface-visibility: hidden;
+    transition: 1s;
     left: 0;
 }
 
@@ -157,8 +164,15 @@ body{
     transform: rotateY(-180deg);
 }
 .notVisible{
+    
     display: none;
 }
 .landscape{
 	
+}
+
+.notVisibleWithOpacity{
+    
+    opacity: 0;
+    
 }
