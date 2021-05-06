@@ -43,7 +43,7 @@ function flipPotrait(e){
         actualPotraitPage--;
         document.getElementById("fwdbtnPotrait").classList.remove("notVisible");
         if(actualPotraitPage<=0){
-            document.getElementById("backbtnPotrait").classList.add("notVisible");    
+            document.getElementById("backbtnPotrait").classList.add("notVisible");
         }
         if(actualPotraitPage<2){
             unflippedLandscape()
@@ -70,6 +70,7 @@ function resize(){
             document.getElementById("p1_potrait").classList.add("pageFlipPotrait");
             document.getElementById("p2_potrait").classList.remove("pageFlipPotrait");
         }else if(actualPotraitPage===3){
+            
             document.getElementById("p0_potrait").classList.add("pageFlipPotrait");
             document.getElementById("p1_potrait").classList.add("pageFlipPotrait");
             document.getElementById("p2_potrait").classList.add("pageFlipPotrait");
@@ -80,6 +81,16 @@ function resize(){
 		Array.from(potraitElements).forEach((el) => {
 			el.classList.remove("notVisible")
 		});
+        if(actualPotraitPage===3){
+            document.getElementById("fwdbtnPotrait").classList.add("notVisible");
+            document.getElementById("backbtnPotrait").classList.remove("notVisible");
+        }else if(actualPotraitPage===0){
+            document.getElementById("backbtnPotrait").classList.add("notVisible");
+            document.getElementById("fwdbtnPotrait").classList.remove("notVisible");
+        }else{
+            document.getElementById("backbtnPotrait").classList.remove("notVisible");
+            document.getElementById("fwdbtnPotrait").classList.remove("notVisible");
+        }
         document.getElementById("col2").style.width="100%"
 	}
     else{//landscape
