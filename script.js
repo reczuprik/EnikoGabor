@@ -3,6 +3,7 @@ let actualLandscapePage = 0
 let maxPotraitPage=3;
 window.onload = resize;
 window.onresize = resize;
+
 function flippedLandscape(){
     document.getElementById("flipPageLandscape").classList.add("pageFlip")
     document.getElementById("fwdbtnLandscape").classList.add("notVisibleWithOpacity")

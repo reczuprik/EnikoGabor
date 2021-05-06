@@ -185,22 +185,14 @@ body{
 
 .pageFlip{
     transform: rotateY(-180deg);
-    
 }
 .pageFlipPotrait{
     transform: rotateY(-100deg);
 }
 
 .notVisible{
-    
     display: none;
 }
-.landscape{
-	
-}
-
 .notVisibleWithOpacity{
-    
     opacity: 0;
-    
 }
