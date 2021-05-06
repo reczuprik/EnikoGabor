@@ -23,8 +23,16 @@ function flipLandscape(){
 }
 
 function flipPotrait(e){
-    document.getElementById("p0_potrait").classList.toggle("pageFlip");
-    console.log(e);
+    if(e==="forward"){
+        document.getElementById("p" + actualPotraitPage + "_potrait").classList.toggle("pageFlipPotrait");
+        console.log(e);
+        actualPotraitPage++;
+        
+    }else if(e==="backward"){
+        document.getElementById("p" + (actualPotraitPage - 1) + "_potrait").classList.toggle("pageFlipPotrait");
+        console.log(e);
+        actualPotraitPage--;
+    }
 }
 
 window.onresize = resize;
