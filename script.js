@@ -11,13 +11,13 @@ function flipLandscape(){
         document.getElementById("fwdbtnLandscape").classList.add("notVisibleWithOpacity")
         document.getElementById("bwdbtnLandscape").classList.remove("notVisibleWithOpacity")
         actualLandscapePage=1
-        actualPotraitPage=3
+
     }else{
         document.getElementById("flipPageLandscape").classList.toggle("pageFlip")
         document.getElementById("fwdbtnLandscape").classList.remove("notVisibleWithOpacity")
         document.getElementById("bwdbtnLandscape").classList.add("notVisibleWithOpacity")
         actualLandscapePage=0
-        actualPotraitPage=0
+
     }
 	
 }
