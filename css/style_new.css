@@ -8,7 +8,7 @@ body{
 }
 .container{
     display: flex;
-    height: 85vh;
+    height: 80vh;
     width: 130vh;
     max-width: 80%;
     margin: 3% auto 5%;
