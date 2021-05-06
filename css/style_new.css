@@ -42,10 +42,28 @@ body{
     transition: 1.4s;
     
 }
-.p0{
+.potrait{
+    transition: 3s;
+    backface-visibility: hidden;
+}
+.p0_potrait{
     z-index: 4;
     background-image: url("../images/meghivo.jpg");
     background-position: center;
+    background-repeat: no-repeat no-repeat;
+    background-size: 100% 100%;
+}
+.p1_potrait{
+    z-index: 3;
+    background-image: url("../images/cover.jpg");
+    background-position: 35% 50%;
+    background-repeat: no-repeat no-repeat;
+    background-size: cover;
+}
+.p2_potrait{
+    z-index: 2;
+    background-image: url("../images/menetrend.jpg");
+    background-position: right center;
     background-repeat: no-repeat no-repeat;
     background-size: 100% 100%;
 }
@@ -61,7 +79,7 @@ body{
     width: 100%;
     height: 100%;
     background-image: url("../images/cover.jpg");
-    background-position: center;
+    background-position: 35% 50%;
     background-repeat: no-repeat no-repeat;
     background-size: cover;
     backface-visibility: hidden;
@@ -160,7 +178,7 @@ body{
     left: 0;
 }
 
-.page1Flipped{
+.pageFlip{
     transform: rotateY(-180deg);
 }
 .notVisible{

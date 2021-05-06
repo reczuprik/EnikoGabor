@@ -7,13 +7,13 @@ function flipLandscape(){
     
     if (actualLandscapePage===0) {
         
-        document.getElementById("flipPageLandscape").classList.toggle("page1Flipped")
+        document.getElementById("flipPageLandscape").classList.toggle("pageFlip")
         document.getElementById("fwdbtnLandscape").classList.add("notVisibleWithOpacity")
         document.getElementById("bwdbtnLandscape").classList.remove("notVisibleWithOpacity")
         actualLandscapePage=1
         actualPotraitPage=3
     }else{
-        document.getElementById("flipPageLandscape").classList.toggle("page1Flipped")
+        document.getElementById("flipPageLandscape").classList.toggle("pageFlip")
         document.getElementById("fwdbtnLandscape").classList.remove("notVisibleWithOpacity")
         document.getElementById("bwdbtnLandscape").classList.add("notVisibleWithOpacity")
         actualLandscapePage=0
@@ -22,8 +22,9 @@ function flipLandscape(){
 	
 }
 
-function flipPotrait(){
-    
+function flipPotrait(e){
+    document.getElementById("p0_potrait").classList.toggle("pageFlip");
+    console.log(e);
 }
 
 window.onresize = resize;

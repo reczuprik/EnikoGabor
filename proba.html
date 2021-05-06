@@ -16,16 +16,12 @@
         <div class="landscapeMeghivo landscape" id="landscape_cover">
         </div>
         <div class="column2" id="col2">
-            <div class="page p0 potrait">
-            
+            <div class="page p0_potrait potrait" id="p0_potrait"><!-- meghivo!-->
             </div>
-            <div class="page p1_potrait potrait">
-
+            <div class="page p1_potrait potrait"> <!-- kép idézet!-->
             </div>
-
-
-            <div class="p1 page" id="flipPageLandscape">
-                <div class="element2 landscape" id="landscape_menetrend">
+            <div class="p1 page landscape" id="flipPageLandscape">
+                <div class="element2" id="landscape_menetrend">
                     <button onclick="flipLandscape()" class="btn backbtn landscape" id="bwdbtnLandscape"> << vissza </button>
                 </div>
                 <div class="element1" >
@@ -74,8 +70,8 @@
                     </form>
 					
             </div>
-            <button onclick="flipLandscape()" class="btn backbtn potrait" id="backbtnPotrait"> << vissza </button>
-            <button onclick="flipLandscape()" class="btn frontbtn potrait" id="fwdbtnPotrait"> >> előre </button>
+            <button onclick="flipPotrait('backward')" class="btn backbtn potrait" id="backbtnPotrait"> << vissza </button>
+            <button onclick="flipPotrait('forward')" class="btn frontbtn potrait" id="fwdbtnPotrait"> >> előre </button>
         </div>
 
         
