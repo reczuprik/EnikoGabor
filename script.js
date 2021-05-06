@@ -1,7 +1,9 @@
 let actualPotraitPage = 0
 let actualLandscapePage = 0
-
+let maxPotraitPage=3;
 window.onload = resize;
+window.onresize = resize;
+
 
 function flipLandscape(){
     
@@ -27,15 +29,23 @@ function flipPotrait(e){
         document.getElementById("p" + actualPotraitPage + "_potrait").classList.toggle("pageFlipPotrait");
         console.log(e);
         actualPotraitPage++;
+        document.getElementById("backbtnPotrait").classList.remove("notVisibleWithOpacity");    
+        if(actualPotraitPage===maxPotraitPage){
+            document.getElementById("fwdbtnPotrait").classList.add("notVisibleWithOpacity");    
+        }
         
     }else if(e==="backward"){
         document.getElementById("p" + (actualPotraitPage - 1) + "_potrait").classList.toggle("pageFlipPotrait");
         console.log(e);
         actualPotraitPage--;
+        document.getElementById("fwdbtnPotrait").classList.remove("notVisibleWithOpacity");
+        if(actualPotraitPage===0){
+            document.getElementById("backbtnPotrait").classList.add("notVisibleWithOpacity");    
+        }
     }
 }
 
-window.onresize = resize;
+
 function resize(){
     var landScapeElements = document.getElementsByClassName("landscape")
 	var potraitElements = document.getElementsByClassName("potrait")
