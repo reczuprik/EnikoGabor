@@ -4,7 +4,13 @@ body{
     font-family: Bahnschrift SemiBold;
     text-transform: uppercase;
     color: gray;
-
+}
+.alert{
+    z-index: 20;
+    top: 5px;
+    position: absolute;
+    text-align: center;
+    padding: 0;
 }
 .container{
 	display: flex;
