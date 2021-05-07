@@ -34,7 +34,7 @@ const Participant = mongoose.model("Participant", participantSchema);
 // #################
 
 app.get("/", function(req, res) {
-  res.render("index", {visibility:"hidden",height:"0", text:"" });
+  res.render("index", {text:"Szeretnénk megkérni, hogy részvételi szándékod legkésőbb 2021.06.13-ig jelezd!" });
 
 });
 app.post("/participant", function(req, res) {
@@ -68,7 +68,7 @@ app.post("/participant", function(req, res) {
               if(err){
                 console.log("Saving error");
               }else{
-              res.render("index", { visibility:"visible",height:"auto", text:"Visszajelzésed frissítettük"});
+              res.render("index", { text:"Visszajelzésed frissítettük"});
               }
           });}
 
@@ -78,7 +78,7 @@ app.post("/participant", function(req, res) {
         newParticipant.save(function(err,doc){
           if(err){console.log("Saving error");}
         });
-        res.render("index", { visibility:"visible",height:"auto", text:"Köszönjük, hogy visszajeleztél."});
+        res.render("index", { text:"Köszönjük, hogy visszajeleztél."});
       }
   });
 })

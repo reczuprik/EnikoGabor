@@ -12,9 +12,6 @@
 <body>
     
     <div class="container">
-        <div class="alert alert-success" role="alert"  style='visibility:<%= visibility %>'> 
-            <%= text%>ssss
-        </div>
         <div class="landscapeMeghivo landscape" id="landscape_cover">
         </div>
         <div class="column2" id="col2">
@@ -67,7 +64,8 @@
                         </div>
                         <div class="submitDiv">
                             <button type="submit" id="submitBtn" name="resztvevoRequest" class="submitbtn">Küldés</button>
-                            <p>Szeretnénk megkérni, hogy részvételi szándékod legkésőbb 2021.06.13-ig jelezd!</p>
+                            <p><%= text%></p>
+                            
                             <!-- <label class="respndText notVisible " id="kszitext">Köszönjük hogy visszajeleztél</label> -->
                         </div>
                     </form>
